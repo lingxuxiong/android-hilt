@@ -37,6 +37,12 @@ class ServiceLocator(applicationContext: Context) {
 
     fun provideDateFormatter() = DateFormatter()
 
+    /**
+     * Provides navigator implementation for the provided activity.
+     *
+     * @param [activity] the target activity the navigator will be created for.
+     * @return New navigator for the activity.
+     */
     fun provideNavigator(activity: FragmentActivity): AppNavigator {
         return AppNavigatorImpl(activity)
     }
