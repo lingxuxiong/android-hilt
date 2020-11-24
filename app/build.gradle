@@ -20,6 +20,12 @@ apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-kapt'
 apply plugin: 'dagger.hilt.android.plugin'
 
+apply plugin: "scabbard.gradle"
+scabbard {
+    enabled = true
+    outputFormat "svg"
+}
+
 android {
     compileSdkVersion 29
     buildToolsVersion "29.0.2"
