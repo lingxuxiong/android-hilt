@@ -26,6 +26,18 @@ scabbard {
     outputFormat "svg"
 }
 
+apply plugin: "org.jetbrains.dokka"
+dokkaHtml.configure {
+    dokkaSourceSets {
+        named("main") {
+            noAndroidSdkLink.set(false)
+        }
+    }
+
+    //  outputDirectory.set(buildDir.resolve("dokka"))
+    outputDirectory.set(new File(buildDir, "dokka"))
+}
+
 android {
     compileSdkVersion 29
     buildToolsVersion "29.0.2"
