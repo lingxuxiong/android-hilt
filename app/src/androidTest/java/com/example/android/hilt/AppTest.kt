@@ -22,24 +22,13 @@ import androidx.test.espresso.action.ViewActions.click
 import androidx.test.espresso.assertion.ViewAssertions.matches
 import androidx.test.espresso.matcher.ViewMatchers.*
 import androidx.test.ext.junit.runners.AndroidJUnit4
-import com.example.android.hilt.data.LoggerLocalDataSource
 import com.example.android.hilt.ui.MainActivity
 import org.hamcrest.Matchers.containsString
-import org.junit.After
 import org.junit.Test
 import org.junit.runner.RunWith
-import javax.inject.Inject
 
 @RunWith(AndroidJUnit4::class)
 class AppTest {
-
-    @Inject lateinit var loggerLocalDataSource: LoggerLocalDataSource
-
-    @After
-    fun tearDown() {
-        // Remove logs after the test finishes
-        loggerLocalDataSource.removeLogs()
-    }
 
     @Test
     fun happyPath() {
