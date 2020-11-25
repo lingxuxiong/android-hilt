@@ -1,7 +1,6 @@
 package com.example.android.hilt.di
 
 import android.content.Context
-import androidx.annotation.StringDef
 import androidx.room.Room
 import com.example.android.hilt.data.AppDatabase
 import com.example.android.hilt.data.LogDao
